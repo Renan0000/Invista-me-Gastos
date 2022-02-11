@@ -1,0 +1,23 @@
+{% extends '../base.html' %}
+{% block conteudo %}
+<h1 style="text-align: center;">Detalhe de Gastos</h1>
+<div class="container">
+    <table class="table table-hover table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Gasto</th>
+            <th>Valor</th>
+            <th>Data</th>
+            <th>Pago</th>
+        </tr>
+
+        <tr>
+            <td>{{dadoDetalheGasto.id}}</td>
+            <td>{{dadoDetalheGasto.gasto}}</td>
+            <td>{{dadoDetalheGasto.valor}}</td>
+            <td>{{dadoDetalheGasto.data}}</td>
+            <td>{{dadoDetalheGasto.pago}}</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

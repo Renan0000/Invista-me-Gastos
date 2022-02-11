@@ -1,0 +1,21 @@
+{% extends '../base.html' %}
+{% block conteudo %}
+{% load widget_tweaks %}
+<div class="container">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h1>Formulario Novo Gasto</h1>
+        <div class="form-row align-items-center">
+            <label>Investimento</label>
+            {% render_field formularioGasto.gasto class='form-control' %}
+            <label>Valor</label>
+            {% render_field formularioGasto.valor class='form-control pull-left' %}
+            <label>Pago</label>
+            {% render_field formularioGasto.pago class='form-control' %}
+            <label>Data</label>
+            {% render_field formularioGasto.data class='form-control' %}
+        </div>
+        <button style="margin-top: 10px;" type="submit" class="btn btn-success">Salvar</button>
+    </form>
+</div>
+{% endblock %}
